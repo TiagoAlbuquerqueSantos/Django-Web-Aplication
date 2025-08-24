@@ -14,5 +14,14 @@
     <h2>Olá, eu me chamo {{nome}}!</h2>
     <br>
     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button id='btn'>Clique Aqui!</button></a>
+
+    <form action="{% url 'pagina_inicial' %}" method="POST"> {% csrf_token %}
+      <input type="text" name="nome" placeholder="Digite seu nome">
+      <br><br>
+      <input type="number" value="idade" name="idade" placeholder="Digite sua idade">
+      <br><br>
+      <input type="submit" value="Enviar">
+      
+    </form>
   </body>
 </html>
